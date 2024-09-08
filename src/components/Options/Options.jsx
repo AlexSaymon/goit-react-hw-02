@@ -1,10 +1,10 @@
-const Options = ({ Change, Reset }) => {
+const Options = ({ change, reset, totalRates }) => {
   return (
     <div>
-      <button onClick={() => Change("good")}>Good</button>
-      <button onClick={() => Change("neutral")}>Neutral</button>
-      <button onClick={() => Change("bad")}>Bad</button>
-      {Reset && <button onClick={() => Reset()}>Reset</button>}
+      <button onClick={() => change("good")}>Good</button>
+      <button onClick={() => change("neutral")}>Neutral</button>
+      <button onClick={() => change("bad")}>Bad</button>
+      {totalRates > 0 && <button onClick={() => reset()}>Reset</button>}
     </div>
   );
 };

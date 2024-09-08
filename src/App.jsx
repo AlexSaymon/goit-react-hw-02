@@ -39,15 +39,15 @@ function App() {
     <>
       <Description />
       <Options
-        Change={handleChangeRateData}
-        TotalRates={totalRates}
-        Reset={totalRates > 0 ? handleResetData : undefined}
+        change={handleChangeRateData}
+        totalRates={totalRates}
+        reset={handleResetData}
       />
       {totalRates > 0 ? (
         <Feedback
-          Rates={rateData}
-          TotalRates={totalRates}
-          PositiveRates={positiveRates}
+          rates={rateData}
+          totalRates={totalRates}
+          positiveRates={positiveRates}
         />
       ) : (
         <Notification />
